@@ -4,7 +4,7 @@
 {
     // 需要编译的文件 **任意目录 *任意文件
     "include":[
-        "./src"
+        "./src","./笔记代码"
     ],
     // 不需要编译的文件,默认值["node_modules","bower_components","json_packages"]
     "exclude": [],
