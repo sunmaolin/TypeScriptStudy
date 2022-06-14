@@ -1,0 +1,52 @@
+/**
+    tsconfig.json是ts编译器的配置文件，ts编译器可以根据它的信息来对代码进行编译。某个值不知道写什么，可以先写个错的。运行会提示错误
+*/
+{
+    // 需要编译的文件 **任意目录 *任意文件
+    "include":[
+        "./src"
+    ],
+    // 不需要编译的文件,默认值["node_modules","bower_components","json_packages"]
+    "exclude": [],
+
+    // 非常重要比较复杂的配置。含n多子选项
+    "compilerOptions": {
+        // 指定编译为js的版本，默认ES3.所有浏览器兼容性较好
+        "target": "ES6",
+        // 模块化解决方案
+        "module": "ES6",
+        // 编译后文件放到哪
+        "outDir": "./dist",
+        // 是否编译JS文件，默认false
+        "allowJs": true,
+        // 检查JS代码是否符合规范，默认是false。如let a = 10; a = 'nihao';这个就会报错提示。因为a是number类型
+        "checkJs": true,
+        // 是否移除注释，默认fasle
+        "removeComments": false,
+        // 不生成编译后的文件，默认false
+        "noEmit": false,
+        // 当有错误时，不生成编译后的文件，默认false
+        "noEmitOnError": true,
+        // 所有严格检查的总开关，默认false
+        "strict": false,
+        // 编译后的文件是否严格模式。默认false
+        "alwaysStrict": false,
+        // 不允许隐式any类型。 默认是false
+        "noImplicitAny": false,
+        // 不允许不明确类型的this，默认false
+        "noImplicitThis": false,
+        // 严格的检查空值，默认false
+        "strictNullChecks": false,
+
+        // 编译后的代码合并为一个文件输出(仅支持module为amd或system)
+        // "outFile": "./dist/app.js",
+        // 用来指定项目中要使用的库.如下使用了DOM，document就可用了。一般不用，默认就是浏览器运行环境
+        //"lib": ["DOM"],
+    },
+
+    // 继承的配置文件
+    //"extends": "",
+    // 与include相同，单独文件配置。用不到
+    //"files": [],
+
+}
