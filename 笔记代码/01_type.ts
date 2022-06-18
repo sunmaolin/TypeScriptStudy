@@ -69,11 +69,11 @@ e = <string>h;
 // ======================================
 
 // void 用来表示空，以函数为例，就表示没有返回值的函数
-function fn1(): void{
+function fn2(): void{
     
 }
 // never 表示永远不会返回结果(如函数抛出错误)
-function fn2(): never{
+function fn3(): never{
     throw new Error('报错了!');
 }
 

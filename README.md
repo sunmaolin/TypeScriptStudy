@@ -30,6 +30,8 @@ npm install -D webpack webpack-cli typescript ts-loader
 然后根目录新建webpack.config.js
 配置好在package.json中添加build命令进行打包
 
+注意：使用webpack打包，笔记代码中的编译后文件就不会输出了，因为webpack中没有配置
+
 ## 3. webpack插件自动生成html文件
 
 ```shell
@@ -58,4 +60,20 @@ npm install -D clean-webpack-plugin
 
 ```shell
 npm install -D @babel/core @babel/preset-env babel-loader core-js
+```
+
+# 贪吃蛇项目
+
+## 1，安装less，这是css插件
+
+```shell
+npm i -D less less-loader css-loader style-loader
+```
+
+在ts中引入使用。因为webpack是将css打包到js中
+
+## 2. css语法兼容
+
+```shell
+npm i -D postcss postcss-loader postcss-preset-env
 ```

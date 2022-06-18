@@ -16,9 +16,10 @@ module.exports = {
         path: path.resolve(__dirname,'dist'),
         // 打包后的文件
         filename: 'index.js',
-        // 不使用箭头函数
+        // 不使用箭头函数和const
         environment:{
-            arrowFunction: false
+            arrowFunction: false,
+            const: false
         }
     },
 
@@ -62,6 +63,30 @@ module.exports = {
                 ],
                 // 要排除的文件
                 exclude: /node_modules/
+            },
+            // 设置less文件的处理
+            {
+                test: /\.less$/,
+                use:[
+                    "style-loader",
+                    "css-loader",
+                    {
+                        loader: "postcss-loader",
+                        options: {
+                            postcssOptions: {
+                                plugins:[
+                                    [
+                                        "postcss-preset-env",
+                                        {
+                                            browsers: 'last 2 versions'
+                                        }
+                                    ]
+                                ]
+                            }
+                        }
+                    },
+                    "less-loader"
+                ]
             }
         ]
     },
