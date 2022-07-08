@@ -37,6 +37,8 @@
         "noImplicitThis": false,
         // 严格的检查空值，默认false
         "strictNullChecks": false,
+        // 支持装饰器模式
+        "experimentalDecorators": true,
 
         // 编译后的代码合并为一个文件输出(仅支持module为amd或system)
         // "outFile": "./dist/app.js",
